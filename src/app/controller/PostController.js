@@ -28,7 +28,7 @@ class PostController{
         }
 
         const result = await this.service.delete(params.id)
-        return {result, stauts: 200}
+        return res.status(result.status).json(result)
     }
 }
 
